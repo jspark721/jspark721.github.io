@@ -1,27 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Merriweather');
-
-$body: 'Inconsolata', monospace;
-$big: 'Merriweather', serif;
-
-$white: #ffffff;
-$primary: #F2DAD7;
-$secondary: #D1A39E;
-$light: #CECDCA;
-$dark: #474545;
-
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
 body {
-  font-family: $body;
+  font-family: "Inconsolata", monospace;
 }
 
 a {
   text-decoration: none;
-  color: $secondary;
-  &:hover {
-    color: $dark;
-    transition: all .5s ease;
-    padding: 5px;
-    border: 1px solid $dark;
-  }
+  color: #D1A39E;
+}
+a:hover {
+  color: #474545;
+  transition: all .5s ease;
+  padding: 5px;
+  border: 1px solid #474545;
 }
 
 .landing {
@@ -34,7 +24,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: $primary;
+  background: #F2DAD7;
 }
 
 .landing__logo {
@@ -51,11 +41,11 @@ a {
 }
 
 .icon {
-	width: 0;
-	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 20px solid $white;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #ffffff;
 }
 
 .landing__title {
@@ -64,8 +54,8 @@ a {
 }
 
 .title {
-  color: $white;
-  font-family: $big;
+  color: #ffffff;
+  font-family: "Merriweather", serif;
   text-transform: lowercase;
   letter-spacing: 1px;
   font-size: 3em;
@@ -90,9 +80,8 @@ p {
   margin: 1em 0;
   font-size: 1em;
   text-align: right;
-  color: $secondary;
+  color: #D1A39E;
 }
-
 
 @media screen and (min-width: 30em) {
   .landing {
@@ -101,6 +90,7 @@ p {
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: 40% 60%;
   }
+
   .landing__title {
     grid-area: 2 / 1 / 2 / 3;
     margin: 0;
