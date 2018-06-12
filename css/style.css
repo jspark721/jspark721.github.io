@@ -1,17 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Inconsolata", monospace;
 }
 
 a {
   text-decoration: none;
-  color: #D1A39E;
+  color: #474545;
+  cursor: pointer;
 }
-.links a:hover {
+
+.links {
+  color: #ffffff;
+}
+.links:hover {
   color: #474545;
   transition: all .5s ease;
-  padding: 5px;
-  border: 1px solid #474545;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 p {
@@ -63,7 +74,7 @@ h2 {
 }
 
 .landing__title {
-  margin-top: 7em;
+  margin-top: 15em;
   position: relative;
   text-align: center;
 }
@@ -86,10 +97,10 @@ h2 {
 .enter {
   margin: 1em 0;
   font-size: 1em;
-  color: #D1A39E;
 }
 
 .landing__content {
+  position: relative;
   opacity: 0;
 }
 
@@ -113,7 +124,6 @@ h2 {
   .landing__content {
     grid-area: 1 / 4 / 1 / 4;
     text-align: right;
-    margin: 0 auto;
     opacity: 1;
   }
 }

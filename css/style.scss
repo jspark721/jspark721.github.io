@@ -9,21 +9,29 @@ $secondary: #D1A39E;
 $light: #CECDCA;
 $dark: #474545;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: $body;
 }
 
 a {
   text-decoration: none;
-  color: $secondary;
+  color: $dark;
+  cursor: pointer;
 }
 
-.links a {
+.links {
+  color: $white;
   &:hover {
     color: $dark;
     transition: all .5s ease;
-    padding: 5px;
-    border: 1px solid $dark;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 
@@ -76,7 +84,7 @@ h2 {
 }
 
 .landing__title {
-  margin-top: 7em;
+  margin-top: 15em;
   position: relative;
   text-align: center;
 }
@@ -99,10 +107,10 @@ h2 {
 .enter {
   margin: 1em 0;
   font-size: 1em;
-  color: $secondary;
 }
 
 .landing__content {
+  position: relative;
   opacity: 0;
 }
 
@@ -124,7 +132,6 @@ h2 {
   .landing__content {
     grid-area: 1 / 4 / 1 / 4;
     text-align: right;
-    margin: 0 auto;
     opacity: 1;
   }
 }
