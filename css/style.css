@@ -7,11 +7,23 @@ a {
   text-decoration: none;
   color: #D1A39E;
 }
-a:hover {
+.links a:hover {
   color: #474545;
   transition: all .5s ease;
   padding: 5px;
   border: 1px solid #474545;
+}
+
+p {
+  margin: 0;
+  line-height: 1.3em;
+  font-size: 0.8em;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 1.5em;
+  margin: 0;
 }
 
 .landing {
@@ -24,14 +36,13 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #F2DAD7;
 }
 
-.landing__logo {
+.landing__box {
   position: absolute;
   left: 0;
   top: 0;
-  background: transparent;
+  background: #D1A39E;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +51,10 @@ a:hover {
   cursor: pointer;
 }
 
-.icon {
+.landing__logo {
+  position: absolute;
+  left: 30px;
+  top: 30px;
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
@@ -51,6 +65,7 @@ a:hover {
 .landing__title {
   margin-top: 7em;
   position: relative;
+  text-align: center;
 }
 
 .title {
@@ -60,15 +75,7 @@ a:hover {
   letter-spacing: 1px;
   font-size: 3em;
   margin: 0;
-  text-align: right;
   font-weight: 100;
-}
-
-p {
-  margin: 0;
-  line-height: 1.3em;
-  text-align: right;
-  font-size: 0.8em;
 }
 
 .subtitle {
@@ -79,8 +86,11 @@ p {
 .enter {
   margin: 1em 0;
   font-size: 1em;
-  text-align: right;
   color: #D1A39E;
+}
+
+.landing__content {
+  opacity: 0;
 }
 
 @media screen and (min-width: 30em) {
@@ -94,5 +104,16 @@ p {
   .landing__title {
     grid-area: 2 / 1 / 2 / 3;
     margin: 0;
+    align-items: flex-end;
+    align-self: stretch;
+    justify-self: end;
+    text-align: right;
+  }
+
+  .landing__content {
+    grid-area: 1 / 4 / 1 / 4;
+    text-align: right;
+    margin: 0 auto;
+    opacity: 1;
   }
 }
