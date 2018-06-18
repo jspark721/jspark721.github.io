@@ -1,11 +1,20 @@
 let background = document.querySelector('.landing__box');
-background.style.transform = "scaleX(100) scaleY(90)";
-
 let enter = document.querySelector('.enter');
-enter.onclick = close;
-
 let logo = document.querySelector('.landing__logo');
+let landing = document.querySelector('.landing');
+let main = document.querySelector('#main');
+let menu = document.getElementById('menu');
+let nav = document.querySelector('nav');
+
+
+background.style.transform = "scaleX(100) scaleY(90)";
+enter.onclick = close;
+background.onclick = open;
 logo.onclick = open;
+main.style.transform = 'translateY(100%)';
+main.style.opacity = '0';
+menu.style.opacity = '0';
+
 
 //animation for clicking logo
 
@@ -13,9 +22,8 @@ function open() {
   anime({
     targets: '.landing__logo',
     translateY: [
-      {value: '-400%', duration: 500,  delay: 500, easing: 'easeOutQuad'},
-      {value: ['200%', '0%'], duration: 700, easing: 'easeOutExpo'}],
-      rotate: [{value: 0, duration: 300}, {value: [150,0], duration: 1300, easing: 'easeOutElastic'}
+      {value: '-400%', duration: 400,  delay: 200, easing: 'easeOutQuad'},
+      {value: ['200%', '0%'], duration: 300, easing: 'easeOutExpo'}
     ]
   });
 
@@ -38,11 +46,22 @@ function open() {
     targets: '.el',
     translateX: 0,
     direction: 'normal',
-    duration: 2500,
+    duration: 2000,
     opacity: 1,
     delay: (el, i, l) => i * 300
   });
-
+  anime({
+    targets: '#main',
+    translateX: '110%',
+    duration: 1500,
+    delay: 400,
+    opacity: {
+      value: 0,
+      easing: 'linear',
+      duration: 800
+    }
+  });
+  menu.style.opacity = '0';
 };
 
 //animation for clicking enter
@@ -64,20 +83,42 @@ function close() {
   });
 
   anime({
-  	targets: 'div.landing__title, .landing__content',
+    targets: '.el',
     translateX: '-20%',
+    easing: 'easeOutExpo',
+    delay: 550,
+    duration: 200,
+    opacity: { value: 0, easing: 'linear', duration: 200, delay: 500 }
+  });
+
+  anime({
+  	targets: 'div.landing__title, .landing__content',
+    translateX: '-100%',
     opacity: 0,
     delay: 550,
     duration: 300,
     easing: 'easeOutExpo'
   });
-  anime({
-    targets: '.el',
-    translateX: '-20%',
-    easing: 'easeOutExpo',
-    delay: 550,
-    duration: 300,
-    opacity: { value: 0, easing: 'linear', duration: 200, delay: 500 }
-  });
 
+  anime({
+    targets: '#main',
+    translateY: 0,
+    duration: 2000,
+    delay: 200,
+    opacity: {
+      value: 1,
+      easing: 'linear',
+      delay: 1200,
+      duration: 800
+    }
+  });
+  menu.style.opacity = '1';
 };
+
+/*hamburger menu*/
+function toggleMenu() {
+  menu.classList.toggle('open');
+  nav.classList.toggle('show');
+}
+
+menu.onclick = toggleMenu;
