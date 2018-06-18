@@ -104,6 +104,74 @@ h2 {
   opacity: 0;
 }
 
+/*hamburger menu*/
+#menu {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  padding: 8px;
+  top: 1em;
+  right: 0;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+  z-index: 3;
+}
+#menu.open .top {
+  background: #D1A39E;
+  transform: translateY(7px) rotateZ(45deg);
+}
+#menu.open .middle {
+  opacity: 0;
+}
+#menu.open .bottom {
+  background: #D1A39E;
+  transform: translateY(-7px) rotateZ(-45deg);
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 5em;
+  height: 80px;
+  padding-top: 27px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+}
+nav.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar a {
+  text-transform: uppercase;
+  padding: 10px;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+}
+
+.bar {
+  display: block;
+  height: 3px;
+  width: 20px;
+  background: #D1A39E;
+  margin: 4px auto;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+/*main page area*/
+#main {
+  width: 100vw;
+  margin-left: 80px;
+  margin-right: 80px;
+  position: relative;
+}
+
+.content {
+  padding: 10px;
+}
+
 @media screen and (min-width: 30em) {
   .landing {
     display: grid;
@@ -125,5 +193,12 @@ h2 {
     grid-area: 1 / 4 / 1 / 4;
     text-align: right;
     opacity: 1;
+  }
+
+  #main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
   }
 }
