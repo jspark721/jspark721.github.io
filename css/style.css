@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -31,10 +32,38 @@ p {
   font-size: 0.8em;
 }
 
+h1 {
+  font-family: "Merriweather", serif;
+  margin-bottom: 0.3em;
+  font-weight: 100;
+  color: #474545;
+}
+
 h2 {
   font-weight: 100;
   font-size: 1.5em;
   margin: 0;
+}
+
+button {
+  outline: none;
+  background: transparent;
+  border: 1px solid #474545;
+  box-shadow: 1px 1px 2px rgba(71, 69, 69, 0.3);
+  cursor: pointer;
+}
+button:hover {
+  background: #F2DAD7;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.03);
+}
+
+.btn-main {
+  font-family: "Inconsolata", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px;
+  margin: 2em auto;
 }
 
 .landing {
@@ -59,18 +88,16 @@ h2 {
   justify-content: center;
   width: 80px;
   height: 80px;
-  cursor: pointer;
 }
 
 .landing__logo {
   position: absolute;
   left: 30px;
   top: 30px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid #ffffff;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .landing__title {
@@ -104,9 +131,8 @@ h2 {
   opacity: 0;
 }
 
-/*hamburger menu*/
 #menu {
-  position: absolute;
+  position: fixed;
   width: 80px;
   height: 80px;
   padding: 8px;
@@ -129,7 +155,7 @@ h2 {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 5em;
   height: 80px;
@@ -141,13 +167,14 @@ nav {
 nav.show {
   opacity: 1;
   visibility: visible;
+  z-index: 3;
 }
 
 .navbar a {
   text-transform: uppercase;
-  padding: 10px;
+  padding: 20px;
   letter-spacing: 2px;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .bar {
@@ -160,16 +187,94 @@ nav.show {
   transition: all .5s ease;
 }
 
-/*main page area*/
 #main {
-  width: 100vw;
-  margin-left: 80px;
-  margin-right: 80px;
+  width: 100%;
+  height: 90vh;
+  margin-top: 80px;
   position: relative;
+  overflow: hidden;
 }
 
-.content {
-  padding: 10px;
+.hero__image {
+  position: absolute;
+  top: 3%;
+  width: 60%;
+  right: 0;
+}
+
+.hero__image img {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+.hero__title {
+  position: absolute;
+  margin: 5em 17em 5em 4em;
+  font-size: 1.3em;
+}
+.hero__title p {
+  color: #615e5e;
+  margin-left: 2px;
+}
+
+.hero__content {
+  margin-top: .5em;
+  padding: 2em;
+  background: #F2DAD7;
+}
+.hero__content p {
+  font-size: 1em;
+}
+
+#portfolio {
+  width: 100%;
+  height: 90vh;
+  margin-top: 80px;
+  position: relative;
+  border: 1px solid #F2DAD7;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr 1fr;
+  grid-gap: 1px;
+}
+
+.project {
+  background: #F2DAD7;
+  white-space: nowrap;
+}
+.project p {
+  padding: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.grid__title {
+  position: absolute;
+  left: 5px;
+  bottom: 35%;
+  font-weight: 100;
+  font-size: 0.8em;
+}
+.grid__title span {
+  text-transform: uppercase;
+  color: #474545;
+  letter-spacing: 2px;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  padding: 1em;
+  transform: rotate(180deg);
+}
+
+.two {
+  left: 25.5%;
+}
+
+.three {
+  left: 50.5%;
+}
+
+.four {
+  left: 75.5%;
 }
 
 @media screen and (min-width: 30em) {
@@ -194,11 +299,13 @@ nav.show {
     text-align: right;
     opacity: 1;
   }
+}
+@media screen and (max-width: 870px) {
+  .hero__image {
+    width: 100%;
+  }
 
-  #main {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+  .hero__title {
+    margin: 7em 2em;
   }
 }

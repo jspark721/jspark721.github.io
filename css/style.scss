@@ -9,13 +9,18 @@ $secondary: #D1A39E;
 $light: #CECDCA;
 $dark: #474545;
 
+$ease: all 0.5s ease-in-out;
+
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   font-family: $body;
 }
+
+//fonts
 
 a {
   text-decoration: none;
@@ -41,12 +46,44 @@ p {
   font-size: 0.8em;
 }
 
+h1 {
+  font-family: $big;
+  margin-bottom: 0.3em;
+  font-weight: 100;
+  color: $dark;
+}
+
 h2 {
   font-weight: 100;
   font-size: 1.5em;
   margin: 0;
 }
 
+//buttons
+
+button {
+  outline: none;
+  background: transparent;
+  border: 1px solid $dark;
+  box-shadow: 1px 1px 2px rgba($dark, .3);
+  cursor: pointer;
+  &:hover {
+    background: $primary;
+    transition: $ease;
+    transform: scale(1.03);
+  }
+}
+
+.btn-main {
+  font-family: $body;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px;
+  margin: 2em auto;
+
+}
+
+//intro landing page
 .landing {
   position: fixed;
   top: 0;
@@ -69,18 +106,16 @@ h2 {
   justify-content: center;
   width: 80px;
   height: 80px;
-  cursor: pointer;
 }
 
 .landing__logo {
   position: absolute;
   left: 30px;
   top: 30px;
-	width: 0;
-	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 20px solid $white;
+  width: 30px;
+  height: 30px;
+  color: $white;
+  cursor: pointer;
 }
 
 .landing__title {
@@ -114,9 +149,9 @@ h2 {
   opacity: 0;
 }
 
-/*hamburger menu*/
+// hamburger menu & navigation bar
 #menu {
-  position: absolute;
+  position: fixed;
   width: 80px;
   height: 80px;
   padding: 8px;
@@ -141,7 +176,7 @@ h2 {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 5em;
   height: 80px;
@@ -152,13 +187,14 @@ nav {
   &.show {
     opacity: 1;
     visibility: visible;
+    z-index: 3;
   }
 }
 .navbar a {
   text-transform: uppercase;
-  padding: 10px;
+  padding: 20px;
   letter-spacing: 2px;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .bar {
@@ -171,21 +207,99 @@ nav {
   transition: all .5s ease;
 }
 
-/*main page area*/
+// homepage - main area
 #main {
-  width: 100vw;
-  margin-left: 80px;
-  margin-right: 80px;
+  width: 100%;
+  height: 90vh;
+  margin-top: 80px;
   position: relative;
+  overflow: hidden;
 }
 
-.content {
-  padding: 10px;
+.hero__image {
+  position: absolute;
+  top: 3%;
+  width: 60%;
+  right: 0;
 }
 
-.content__main {
-
+.hero__image img {
+  width: 100%;
+  margin-bottom: -5px;
 }
+
+.hero__title {
+  position: absolute;
+  margin: 5em 17em 5em 4em;
+  font-size: 1.3em;
+  p {
+    color: lighten($dark, 10%);
+    margin-left: 2px;
+  }
+}
+
+.hero__content {
+  margin-top: .5em;
+  padding: 2em;
+  background: $primary;
+  p {
+    font-size: 1em;
+  }
+}
+
+//portfolio area
+
+#portfolio {
+  width: 100%;
+  height: 90vh;
+  margin-top: 80px;
+  position: relative;
+  border: 1px solid $primary;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr 1fr;
+  grid-gap: 1px;
+}
+.project {
+  background: $primary;
+  white-space: nowrap;
+  p {
+    padding: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.grid__title {
+  position: absolute;
+  left: 5px;
+  bottom: 35%;
+  font-weight: 100;
+  font-size: 0.8em;
+  span {
+    text-transform: uppercase;
+    color: $dark;
+    letter-spacing: 2px;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    padding: 1em;
+    transform: rotate(180deg);
+  }
+}
+
+.two {
+  left: 25.5%;
+}
+
+.three {
+  left: 50.5%;
+}
+
+.four {
+  left: 75.5%;
+}
+
+//media large screen
 
 @media screen and (min-width: 30em) {
   .landing {
@@ -207,11 +321,15 @@ nav {
     text-align: right;
     opacity: 1;
   }
+}
 
-  #main {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+//media medium screen
+
+@media screen and (max-width: 870px) {
+  .hero__image {
+    width: 100%;
+  }
+  .hero__title {
+    margin: 7em 2em;
   }
 }
