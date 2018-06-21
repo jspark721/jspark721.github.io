@@ -5,7 +5,7 @@ let landing = document.querySelector('.landing');
 let main = document.querySelector('#main');
 let menu = document.getElementById('menu');
 let nav = document.querySelector('nav');
-
+let footer = document.querySelector('footer');
 
 background.style.transform = "scaleX(100) scaleY(90)";
 enter.onclick = close;
@@ -14,7 +14,7 @@ logo.onclick = open;
 main.style.transform = 'translateY(100%)';
 main.style.opacity = '0';
 menu.style.opacity = '0';
-
+footer.style.opacity = '0';
 
 //animation for clicking logo
 
@@ -62,11 +62,14 @@ function open() {
     }
   });
   menu.style.opacity = '0';
+  footer.style.opacity = '0';
 };
 
 //animation for clicking enter
 
 function close() {
+  window.scrollTo(0, 0);
+
   anime({
     targets: '.landing__logo',
     translateY: [
@@ -77,9 +80,11 @@ function close() {
   });
   anime({
     targets: 'div.landing__box',
+    // backgroundColor: '#fff',
+    // delay: 1600,
     scaleX: {value: 1, duration: 800, delay: 500, easing: 'easeOutExpo'},
     scaleY: {value: 1, duration: 800, delay: 600, easing: 'easeOutQuad'},
-    opacity: {value: 0.4, duration: 800, delay: 1000, easing: 'easeOutQuad'}
+    opacity: {value: 1, duration: 800, delay: 1000, easing: 'easeOutQuad'}
   });
 
   anime({
@@ -112,7 +117,24 @@ function close() {
       duration: 800
     }
   });
-  menu.style.opacity = '1';
+  anime({
+    targets: '#menu',
+    opacity: {
+      value: 1,
+      easing: 'linear',
+      delay: 200,
+      duration: 800
+    }
+  });
+  anime({
+    targets: 'footer',
+    opacity: {
+      value: 1,
+      easing: 'linear',
+      delay: 1800,
+      duration: 800
+    }
+  });
 };
 
 /*hamburger menu*/

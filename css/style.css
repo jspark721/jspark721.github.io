@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
+
 * {
   box-sizing: border-box;
   margin: 0;
 }
+
+::-webkit-scrollbar { display: none; }
 
 body {
   font-family: "Inconsolata", monospace;
@@ -54,7 +57,7 @@ button {
 }
 button:hover {
   background: #F2DAD7;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform: scale(1.03);
 }
 
@@ -76,6 +79,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 10;
 }
 
 .landing__box {
@@ -143,14 +147,14 @@ button:hover {
   z-index: 3;
 }
 #menu.open .top {
-  background: #D1A39E;
+  background: #c1827b;
   transform: translateY(7px) rotateZ(45deg);
 }
 #menu.open .middle {
   opacity: 0;
 }
 #menu.open .bottom {
-  background: #D1A39E;
+  background: #c1827b;
   transform: translateY(-7px) rotateZ(-45deg);
 }
 
@@ -181,7 +185,7 @@ nav.show {
   display: block;
   height: 3px;
   width: 20px;
-  background: #D1A39E;
+  background: #c1827b;
   margin: 4px auto;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
@@ -191,8 +195,8 @@ nav.show {
   width: 100%;
   height: 90vh;
   margin-top: 80px;
+  background: #ffffff;
   position: relative;
-  overflow: hidden;
 }
 
 .hero__image {
@@ -229,33 +233,33 @@ nav.show {
 #portfolio {
   width: 100%;
   height: 90vh;
-  margin-top: 80px;
+  background: #ffffff;
   position: relative;
-  border: 1px solid #F2DAD7;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 2fr 1fr;
-  grid-gap: 1px;
+  grid-template-rows: 430px 230px;
+  grid-gap: 2px;
 }
 
 .project {
+  position: relative;
+  margin-top: 3em;
   background: #F2DAD7;
-  white-space: nowrap;
 }
 .project p {
   padding: 1.5em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
-.grid__title {
+.project .grid__title {
   position: absolute;
+  white-space: nowrap;
   left: 5px;
-  bottom: 35%;
+  bottom: 0;
   font-weight: 100;
   font-size: 0.8em;
 }
-.grid__title span {
+.project .grid__title span {
   text-transform: uppercase;
   color: #474545;
   letter-spacing: 2px;
@@ -265,16 +269,146 @@ nav.show {
   transform: rotate(180deg);
 }
 
-.two {
-  left: 25.5%;
+.fullwidth {
+  grid-column-start: span 4;
+  padding: 4em;
+  background: #ffffff;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+}
+.fullwidth h3 {
+  font-weight: 100;
 }
 
-.three {
-  left: 50.5%;
+#contact {
+  width: 100%;
+  height: 50vh;
+  background: #D1A39E;
+  position: relative;
 }
 
-.four {
-  left: 75.5%;
+.contact__header {
+  position: absolute;
+  left: 5em;
+  top: 5em;
+}
+.contact__header h1 {
+  color: #ffffff;
+}
+.contact__header p {
+  color: #F2DAD7;
+}
+
+.contact__main {
+  position: absolute;
+  left: 25%;
+  top: 45%;
+  width: 50%;
+  height: 80%;
+  text-align: center;
+  background: #F2DAD7;
+  box-shadow: 3px 3px 6px rgba(71, 69, 69, 0.2);
+}
+.contact__main p {
+  margin-top: 5em;
+  line-height: 1.7em;
+  color: #D1A39E;
+}
+.contact__main a {
+  color: #D1A39E;
+  text-decoration: underline;
+}
+.contact__main a:hover {
+  transition: all .3s ease-out;
+  color: #615e5e;
+}
+.contact__main:hover {
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 5px 5px 10px rgba(71, 69, 69, 0.2);
+}
+
+.contact__social {
+  position: absolute;
+  width: 95%;
+  top: 56%;
+}
+
+.social {
+  list-style-type: none;
+  display: block;
+}
+.social li {
+  display: inline;
+}
+.social a {
+  color: #D1A39E;
+  font-size: 1.5em;
+  padding: 20px;
+}
+.social a:hover {
+  transition: all .3s ease-out;
+  color: #615e5e;
+}
+
+section {
+  z-index: 2;
+}
+
+.footer__spacer {
+  position: relative;
+  z-index: -1;
+  height: 25em;
+  pointer-events: none;
+}
+
+footer {
+  position: fixed;
+  z-index: 0;
+  height: 25em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 1em;
+  padding-top: 0;
+  border: 0 solid #ffffff;
+  border-top: 0;
+  transition: border .3s ease,padding .3s ease;
+}
+footer:hover {
+  padding: 0;
+  padding-top: 0;
+  border: 1em solid #D1A39E;
+  border-top: 0;
+}
+
+.footer__content {
+  position: fixed;
+  margin-top: 11em;
+  margin-left: 3em;
+}
+.footer__content h3 {
+  font-family: "Merriweather", serif;
+  font-size: 1.4em;
+  font-weight: 100;
+  color: #D1A39E;
+}
+.footer__content h3 span {
+  text-decoration: underline;
+  color: #F2DAD7;
+}
+.footer__content p {
+  margin-top: 5px;
+}
+
+.footer__text {
+  position: fixed;
+  color: #D1A39E;
+  bottom: 20px;
+  margin-left: 3em;
 }
 
 @media screen and (min-width: 30em) {
