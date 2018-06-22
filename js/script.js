@@ -135,6 +135,7 @@ function close() {
       duration: 800
     }
   });
+  landing.style.zIndex = '-1';
 };
 
 /*hamburger menu*/

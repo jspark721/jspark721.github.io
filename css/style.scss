@@ -212,15 +212,15 @@ nav {
 // homepage - main area
 #main {
   width: 100%;
-  height: 90vh;
+  min-height: 95vh;
   margin-top: 80px;
+  overflow: auto;
   background: $white;
   position: relative;
 }
 
 .hero__image {
   position: absolute;
-  top: 3%;
   width: 60%;
   right: 0;
 }
@@ -381,20 +381,16 @@ nav {
   }
 }
 
-section {
-  z-index: 2;
-}
-
 .footer__spacer {
   position: relative;
-  z-index: -1;
+  z-index: -2;
   height: 25em;
   pointer-events: none;
 }
 
 footer {
   position: fixed;
-  z-index: 1;
+  z-index: -1;
   height: 25em;
   left: 0;
   bottom: 0;
