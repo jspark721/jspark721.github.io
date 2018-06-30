@@ -63,6 +63,7 @@ function open() {
   });
   menu.style.opacity = '0';
   footer.style.opacity = '0';
+  landing.style.zIndex = '10';
 };
 
 //animation for clicking enter
@@ -135,7 +136,7 @@ function close() {
       duration: 800
     }
   });
-  landing.style.zIndex = '-1';
+  landing.style.zIndex = '0';
 };
 
 /*hamburger menu*/

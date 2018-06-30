@@ -116,6 +116,9 @@ button {
   position: relative;
   opacity: 0; }
 
+section {
+  z-index: 1; }
+
 #menu {
   position: fixed;
   width: 80px;
@@ -189,13 +192,6 @@ nav {
     color: #615e5e;
     margin-left: 2px; }
 
-.hero__content {
-  margin-top: .5em;
-  padding: 2em;
-  background: #F2DAD7; }
-  .hero__content p {
-    font-size: 1em; }
-
 #portfolio {
   width: 100%;
   min-height: 100vh;
@@ -203,25 +199,28 @@ nav {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 500px 500px;
+  grid-template-rows: 450px 450px;
   grid-gap: 2px; }
 
 .project {
   position: relative;
   background: #F2DAD7; }
-  .project:hover {
-    background: #D1A39E; }
   .project p {
+    position: absolute;
     padding: 1.5em;
     text-transform: uppercase;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    z-index: 3; }
+  .project .grid__name {
+    z-index: 3; }
   .project .grid__title {
     position: absolute;
     white-space: nowrap;
     left: 5px;
     bottom: 0;
     font-weight: 100;
-    font-size: 0.8em; }
+    font-size: 0.8em;
+    z-index: 3; }
     .project .grid__title span {
       text-transform: uppercase;
       color: #474545;
@@ -242,6 +241,21 @@ nav {
   position: relative; }
   .fullwidth h3 {
     font-weight: 100; }
+
+.project:hover .overlay {
+  height: 100%; }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  height: 0;
+  opacity: .5;
+  width: 100%;
+  transition: .5s ease; }
+  .overlay img {
+    max-width: 400px; }
 
 #contact {
   width: 100%;
@@ -308,7 +322,7 @@ nav {
 
 footer {
   position: fixed;
-  z-index: -1;
+  z-index: 0;
   height: 25em;
   left: 0;
   bottom: 0;

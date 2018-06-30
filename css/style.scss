@@ -151,6 +151,10 @@ button {
   opacity: 0;
 }
 
+section {
+  z-index: 1;
+}
+
 // hamburger menu & navigation bar
 #menu {
   position: fixed;
@@ -240,14 +244,17 @@ nav {
   }
 }
 
-.hero__content {
-  margin-top: .5em;
-  padding: 2em;
-  background: $primary;
-  p {
-    font-size: 1em;
-  }
-}
+// .hero__content {
+//   margin-top: .5em;
+//   padding: 2em;
+//   background: $primary;
+//   p {
+//     font-size: 1em;
+//   }
+// }
+
+
+
 //about section
 
 // #about {
@@ -268,19 +275,21 @@ nav {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 500px 500px;
+  grid-template-rows: 450px 450px;
   grid-gap: 2px;
 }
 .project {
   position: relative;
   background: $primary;
-  &:hover {
-    background: $secondary;
-  }
   p {
+    position: absolute;
     padding: 1.5em;
     text-transform: uppercase;
     letter-spacing: 2px;
+    z-index: 3;
+  }
+  .grid__name {
+    z-index: 3;
   }
   .grid__title {
     position: absolute;
@@ -289,6 +298,7 @@ nav {
     bottom: 0;
     font-weight: 100;
     font-size: 0.8em;
+    z-index: 3;
     span {
       text-transform: uppercase;
       color: $dark;
@@ -312,6 +322,24 @@ nav {
   position: relative;
   h3 {
     font-weight: 100;
+  }
+}
+
+// project hover overlay
+.project:hover .overlay {
+  height: 100%;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  height: 0;
+  opacity: .5;
+  width: 100%;
+  transition: .5s ease;
+  img {
+    max-width: 400px;
   }
 }
 
@@ -394,7 +422,7 @@ nav {
 
 footer {
   position: fixed;
-  z-index: -1;
+  z-index: 0;
   height: 25em;
   left: 0;
   bottom: 0;
