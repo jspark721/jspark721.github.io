@@ -364,6 +364,26 @@ nav {
   position: relative;
 }
 
+.about__content {
+  margin: 0 5em;
+  padding-top: 5em;
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  p {
+    text-align: center;
+    margin-top: 4em;
+  }
+  ul {
+    margin-top: 3em;
+  }
+  li {
+    line-height: 1.5em;
+  }
+}
+
 //contact section
 #contact {
   width: 100%;
@@ -465,7 +485,7 @@ footer {
 .footer__content {
   position: fixed;
   margin-top: 11em;
-  margin-left: 3em;
+  margin-left: 5em;
   h3 {
     font-family: $big;
     font-size: 1.4em;

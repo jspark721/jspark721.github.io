@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
 * {
   box-sizing: border-box;
@@ -322,6 +323,26 @@ nav.show {
   position: relative;
 }
 
+.about__content {
+  margin: 0 5em;
+  padding-top: 5em;
+}
+.about__content h2 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.about__content p {
+  text-align: center;
+  margin-top: 4em;
+}
+.about__content ul {
+  margin-top: 3em;
+}
+.about__content li {
+  line-height: 1.5em;
+}
+
 #contact {
   width: 100%;
   height: 50vh;
@@ -424,7 +445,7 @@ footer:hover {
 .footer__content {
   position: fixed;
   margin-top: 11em;
-  margin-left: 3em;
+  margin-left: 5em;
 }
 .footer__content h3 {
   font-family: "Merriweather", serif;
