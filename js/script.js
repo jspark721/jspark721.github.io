@@ -21,6 +21,7 @@ footer.style.opacity = '0';
 function open() {
   anime({
     targets: '.landing__logo',
+    color: '#ffffff',
     translateY: [
       {value: '-400%', duration: 400,  delay: 200, easing: 'easeOutQuad'},
       {value: ['200%', '0%'], duration: 300, easing: 'easeOutExpo'}
@@ -29,6 +30,7 @@ function open() {
 
   anime({
   	targets: 'div.landing__box',
+    backgroundColor: '#D1A39E',
   	scaleX: {value: 100, duration: 800, delay: 500, easing: 'easeOutQuad'},
   	scaleY: {value: 100, duration: 1200, delay: 200, easing: 'easeOutQuad'},
     opacity: {value: 1, duration: 800, delay: 100, easing: 'easeOutQuad'}
@@ -73,6 +75,9 @@ function close() {
 
   anime({
     targets: '.landing__logo',
+    easing: 'easeOutQuad',
+    delay: 670,
+    color: '#D1A39E',
     translateY: [
       {value: '-400%', duration: 500,  delay: 500, easing: 'easeOutQuad'},
       {value: ['200%', '0%'], duration: 700, easing: 'easeOutExpo'}],
@@ -81,8 +86,8 @@ function close() {
   });
   anime({
     targets: 'div.landing__box',
-    // backgroundColor: '#fff',
-    // delay: 1600,
+    backgroundColor: '#fff',
+    delay: 1200,
     scaleX: {value: 1, duration: 800, delay: 500, easing: 'easeOutExpo'},
     scaleY: {value: 1, duration: 800, delay: 600, easing: 'easeOutQuad'},
     opacity: {value: 1, duration: 800, delay: 1000, easing: 'easeOutQuad'}
@@ -146,3 +151,21 @@ function toggleMenu() {
 }
 
 menu.onclick = toggleMenu;
+
+/*smooth scrolling*/
+function scrollToTop() {
+  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+}
+
+function scrollToBottom() {
+  let height = document.documentElement.scrollHeight;
+  window.scroll({ top: height, behavior: 'smooth' });
+}
+
+function scrollToAbout() {
+  let aboutDiv = document.getElementById('about');
+  let aboutHeight = aboutDiv.scrollHeight + (window.innerHeight + (window.innerHeight/2.2));
+
+  window.scroll({ top: aboutHeight, behavior: 'smooth' });
+  console.log(aboutHeight);
+}
