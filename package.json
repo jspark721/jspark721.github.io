@@ -1,0 +1,24 @@
+{
+  "name": "juliepark",
+  "version": "1.0.0",
+  "description": "Boiler plate for sass complier",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jspark721/juliepark.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jspark721/juliepark/issues"
+  },
+  "homepage": "https://github.com/jspark721/juliepark#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
