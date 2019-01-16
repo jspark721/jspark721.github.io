@@ -161,11 +161,17 @@ function scrollToBottom() {
   let height = document.documentElement.scrollHeight;
   window.scroll({ top: height, behavior: 'smooth' });
 }
+//
+// function scrollToAbout() {
+//   let aboutDiv = document.getElementById('about');
+//   let aboutHeight = aboutDiv.scrollHeight + (window.innerHeight + (window.innerHeight/2.2));
+//
+//   window.scroll({ top: aboutHeight, behavior: 'smooth' });
+//   console.log(aboutHeight);
+// }
 
-function scrollToAbout() {
-  let aboutDiv = document.getElementById('about');
-  let aboutHeight = aboutDiv.scrollHeight + (window.innerHeight + (window.innerHeight/2.2));
-
-  window.scroll({ top: aboutHeight, behavior: 'smooth' });
-  console.log(aboutHeight);
+function scrollToProject() {
+  let projectDiv = document.getElementById('portfolio');
+  let projectHeight = projectDiv.scrollHeight - 400;
+  window.scroll({ top: projectHeight, behavior: 'smooth'});
 }
