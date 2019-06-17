@@ -27,7 +27,7 @@ a {
 p {
   margin: 0;
   line-height: 1.3em;
-  font-size: 0.8em; }
+  font-size: 1em; }
 
 h1 {
   font-family: "Merriweather", serif;
@@ -49,7 +49,8 @@ button {
   background: transparent;
   border: 1px solid #474545;
   box-shadow: 1px 1px 2px rgba(71, 69, 69, 0.3);
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; }
   button:hover {
     background: #F2DAD7;
     transition: all 0.3s ease-in-out;
@@ -60,7 +61,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 20px;
-  margin: 2em auto; }
+  margin: 2em 2px; }
 
 .landing {
   position: fixed;
@@ -104,17 +105,15 @@ button {
   font-family: "Merriweather", serif;
   text-transform: lowercase;
   letter-spacing: 1px;
-  font-size: 3em;
+  font-size: 3.3em;
   margin: 0;
   font-weight: 100; }
 
 .subtitle {
-  font-weight: bold;
-  font-size: 0.9em; }
+  font-weight: bold; }
 
 .enter {
-  margin: 1em 0;
-  font-size: 1em; }
+  margin: 1em 0; }
 
 .landing__content {
   position: relative;
@@ -181,140 +180,23 @@ nav {
   margin-top: 80px;
   overflow: auto;
   background: #ffffff;
-  position: relative; }
-
-.hero__image {
-  position: absolute;
-  width: 60%;
-  right: 0; }
-
-.hero__image img {
-  width: 100%;
-  margin-bottom: -5px; }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .hero__title {
-  position: absolute;
-  width: 60%;
-  margin: 8em 15em 5em 5em;
-  padding: 5px;
-  font-size: 1.3em; }
+  width: 65%; }
+  .hero__title h1 {
+    font-size: 3.3em; }
   .hero__title p {
     color: #D1A39E;
     margin-left: 2px;
     margin-bottom: 15px; }
 
-#portfolio {
-  width: 100%;
-  min-height: 100vh;
-  background: #ffffff;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 450px 450px;
-  grid-gap: 2px; }
-
-.project {
-  position: relative;
-  background: #F2DAD7; }
-  .project p {
-    position: absolute;
-    padding: 1.5em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    z-index: 3; }
-  .project .grid__name {
-    z-index: 3; }
-  .project .grid__title {
-    position: absolute;
-    white-space: nowrap;
-    left: 5px;
-    bottom: 0;
-    font-weight: 100;
-    font-size: 0.8em;
-    z-index: 3; }
-    .project .grid__title span {
-      text-transform: uppercase;
-      color: #474545;
-      letter-spacing: 2px;
-      -webkit-writing-mode: vertical-rl;
-      writing-mode: vertical-rl;
-      padding: 1em;
-      transform: rotate(180deg); }
-
-.fullwidth {
-  grid-column-start: span 4;
-  margin: 3em 0;
-  padding: 8em;
-  background: #ffffff;
-  text-align: center;
-  justify-self: center;
-  align-self: center;
-  position: relative; }
-  .fullwidth h3 {
-    font-weight: 100;
-    line-height: 1.3em; }
-
-.project:hover .overlay {
-  height: 100%; }
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  height: 0;
-  opacity: .5;
-  width: 100%;
-  transition: .5s ease; }
-  .overlay img {
-    max-width: 400px; }
-
-#about {
-  width: 100%;
-  min-height: 100vh;
-  background: #F2DAD7;
-  position: relative; }
-
-.about__content {
-  margin: 0 5em;
-  padding-top: 5em; }
-  .about__content a {
-    color: #c1827b;
-    border: 1px solid #c1827b;
-    padding: 2px; }
-    .about__content a:hover {
-      background: #D1A39E;
-      color: #ffffff;
-      transition: all .4s ease; }
-  .about__content h2 {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 2em; }
-  .about__content h3 {
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 100;
-    background: #D1A39E;
-    border: 1px solid #474545;
-    padding: 7px;
-    margin: 2em 0; }
-  .about__content p {
-    text-align: center;
-    margin-top: 4em;
-    margin-bottom: 2em; }
-  .about__content li {
-    line-height: 1.5em; }
-
-.me {
-  width: 300px;
-  float: left;
-  margin-right: 2em;
-  border: 1px solid #474545; }
-
 #contact {
   width: 100%;
-  height: 50vh;
+  height: 45vh;
   background: #D1A39E;
   position: relative; }
 
@@ -330,9 +212,9 @@ nav {
 .contact__main {
   position: absolute;
   left: 25%;
-  top: 45%;
+  top: 55%;
   width: 50%;
-  height: 80%;
+  height: 60%;
   text-align: center;
   background: #F2DAD7;
   box-shadow: 3px 3px 6px rgba(71, 69, 69, 0.2); }
@@ -354,7 +236,7 @@ nav {
 .contact__social {
   position: absolute;
   width: 95%;
-  top: 56%; }
+  top: 70%; }
 
 .social {
   list-style-type: none;

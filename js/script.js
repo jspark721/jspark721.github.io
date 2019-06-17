@@ -3,7 +3,6 @@ let enter = document.querySelector('.enter');
 let logo = document.querySelector('.landing__logo');
 let landing = document.querySelector('.landing');
 let main = document.querySelector('#main');
-let menu = document.getElementById('menu');
 let nav = document.querySelector('nav');
 let footer = document.querySelector('footer');
 
@@ -13,7 +12,6 @@ background.onclick = open;
 logo.onclick = open;
 main.style.transform = 'translateY(100%)';
 main.style.opacity = '0';
-menu.style.opacity = '0';
 footer.style.opacity = '0';
 
 //animation for clicking logo
@@ -143,35 +141,3 @@ function close() {
   });
   landing.style.zIndex = '0';
 };
-
-/*hamburger menu*/
-function toggleMenu() {
-  menu.classList.toggle('open');
-  nav.classList.toggle('show');
-}
-
-menu.onclick = toggleMenu;
-
-/*smooth scrolling*/
-function scrollToTop() {
-  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-}
-
-function scrollToBottom() {
-  let height = document.documentElement.scrollHeight;
-  window.scroll({ top: height, behavior: 'smooth' });
-}
-//
-// function scrollToAbout() {
-//   let aboutDiv = document.getElementById('about');
-//   let aboutHeight = aboutDiv.scrollHeight + (window.innerHeight + (window.innerHeight/2.2));
-//
-//   window.scroll({ top: aboutHeight, behavior: 'smooth' });
-//   console.log(aboutHeight);
-// }
-
-function scrollToProject() {
-  let projectDiv = document.getElementById('portfolio');
-  let projectHeight = projectDiv.scrollHeight - 400;
-  window.scroll({ top: projectHeight, behavior: 'smooth'});
-}
