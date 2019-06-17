@@ -195,12 +195,13 @@ nav {
 .hero__title {
   position: absolute;
   width: 60%;
-  margin: 10em 17em 5em 4em;
+  margin: 8em 15em 5em 5em;
   padding: 5px;
   font-size: 1.3em; }
   .hero__title p {
     color: #D1A39E;
-    margin-left: 2px; }
+    margin-left: 2px;
+    margin-bottom: 15px; }
 
 #portfolio {
   width: 100%;
