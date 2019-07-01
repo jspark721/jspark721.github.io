@@ -138,5 +138,13 @@ function close() {
       duration: 800
     }
   });
+  anime({
+  	targets: 'nav',
+    translateY: '10px',
+    opacity: 1,
+    delay: 1500,
+    duration: 1200,
+    easing: 'easeOutExpo'
+  });
   landing.style.zIndex = '0';
 };
