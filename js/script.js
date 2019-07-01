@@ -61,7 +61,6 @@ function open() {
       duration: 800
     }
   });
-  menu.style.opacity = '0';
   footer.style.opacity = '0';
   landing.style.zIndex = '10';
 };

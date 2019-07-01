@@ -61,7 +61,8 @@ button {
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 20px;
-  margin: 2em 2px; }
+  margin: 2em 2px;
+  background: #ffffff; }
 
 .landing {
   position: fixed;
@@ -73,7 +74,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 10; }
+  z-index: 10;
+  overflow: hidden; }
 
 .landing__box {
   position: absolute;
@@ -110,10 +112,11 @@ button {
   font-weight: 100; }
 
 .subtitle {
-  font-weight: bold; }
+  font-size: .9em; }
 
 .enter {
-  margin: 1em 0; }
+  margin: 1em 0;
+  font-size: 1.1em; }
 
 .landing__content {
   position: relative;
@@ -126,54 +129,6 @@ section div {
   scroll-behavior: smooth;
   overflow-y: scroll; }
 
-#menu {
-  position: fixed;
-  width: 80px;
-  height: 80px;
-  padding: 8px;
-  top: 1em;
-  right: 0;
-  -webkit-transition: all .7s ease;
-  transition: all .7s ease;
-  z-index: 3; }
-  #menu.open .top {
-    background: #c1827b;
-    transform: translateY(7px) rotateZ(45deg); }
-  #menu.open .middle {
-    opacity: 0; }
-  #menu.open .bottom {
-    background: #c1827b;
-    transform: translateY(-7px) rotateZ(-45deg); }
-
-nav {
-  position: fixed;
-  top: 0;
-  right: 5em;
-  height: 80px;
-  padding-top: 27px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .5s, visibility .5s; }
-  nav.show {
-    opacity: 1;
-    visibility: visible;
-    z-index: 3; }
-
-.navbar a {
-  text-transform: uppercase;
-  padding: 20px;
-  letter-spacing: 2px;
-  font-size: 0.9em; }
-
-.bar {
-  display: block;
-  height: 3px;
-  width: 20px;
-  background: #c1827b;
-  margin: 4px auto;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease; }
-
 #main {
   width: 100%;
   min-height: 95vh;
@@ -182,6 +137,7 @@ nav {
   background: #ffffff;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
 
@@ -194,6 +150,51 @@ nav {
     margin-left: 2px;
     margin-bottom: 15px; }
 
+.scroll {
+  position: absolute;
+  font-size: .6em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  bottom: 10%; }
+  .scroll i {
+    margin-left: 5px;
+    color: #474545;
+    opacity: .5;
+    animation: bounce 2s ease-in infinite;
+    cursor: pointer; }
+
+#work {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  background: #F2DAD7;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.home__projects {
+  width: 65%; }
+  .home__projects h1 {
+    font-size: 2em; }
+  .home__projects p {
+    line-height: 2em; }
+  .home__projects a {
+    background: #D1A39E;
+    border: 1px solid #474545;
+    padding: 4px; }
+    .home__projects a:hover {
+      background: #ffffff;
+      transition: all 0.3s ease-in-out; }
+  .home__projects span {
+    font-size: .8em;
+    color: #474545; }
+  .home__projects button {
+    margin-top: 55px; }
+    .home__projects button:hover {
+      background: rgba(255, 255, 255, 0.8); }
+
 #contact {
   width: 100%;
   height: 45vh;
@@ -202,10 +203,12 @@ nav {
 
 .contact__header {
   position: absolute;
-  left: 5em;
+  width: 100%;
+  text-align: center;
   top: 5em; }
   .contact__header h1 {
-    color: #ffffff; }
+    color: #ffffff;
+    font-size: 2em; }
   .contact__header p {
     color: #F2DAD7; }
 
@@ -214,7 +217,7 @@ nav {
   left: 25%;
   top: 55%;
   width: 50%;
-  height: 60%;
+  height: 65%;
   text-align: center;
   background: #F2DAD7;
   box-shadow: 3px 3px 6px rgba(71, 69, 69, 0.2); }
@@ -275,11 +278,14 @@ footer {
     padding-top: 0;
     border: 1em solid #D1A39E;
     border-top: 0; }
+  footer p {
+    font-size: .8em; }
 
 .footer__content {
   position: fixed;
   margin-top: 11em;
-  margin-left: 5em; }
+  margin-left: 8em;
+  width: 65%; }
   .footer__content h3 {
     font-family: "Merriweather", serif;
     font-size: 1.4em;
@@ -295,7 +301,11 @@ footer {
   position: fixed;
   color: #D1A39E;
   bottom: 20px;
-  margin-left: 3em; }
+  right: 20px; }
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-5px); } }
 
 @media screen and (min-width: 33em) {
   .landing {
