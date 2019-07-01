@@ -171,6 +171,7 @@ button {
 
 section {
   z-index: 1;
+  min-height: 500px;
 }
 
 section div {
@@ -292,6 +293,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .work__project {
   margin-right: 15px;
