@@ -43,6 +43,14 @@ function open() {
     easing: 'easeOutExpo'
   });
   anime({
+    targets: 'nav',
+    translateY: '-20px',
+    opacity: 0,
+    delay: 800,
+    duration: 500,
+    easing: 'easeOutExpo'
+  });
+  anime({
     targets: '.el',
     translateX: 0,
     direction: 'normal',
