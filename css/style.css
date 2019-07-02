@@ -27,7 +27,8 @@ a {
 p {
   margin: 0;
   line-height: 1.3em;
-  font-size: 1em; }
+  font-size: 1em;
+  color: #474545; }
 
 h1 {
   font-family: "Merriweather", serif;
@@ -39,6 +40,21 @@ h2 {
   font-weight: 100;
   font-size: 1.5em;
   margin: 0; }
+
+.sm-caps {
+  color: #F2DAD7;
+  font-family: "Inconsolata", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+  margin-bottom: 15px;
+  margin-left: 2px; }
+
+.p-caps {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  margin-left: 5px;
+  text-transform: uppercase; }
 
 .sm {
   font-size: .7em;
@@ -55,14 +71,15 @@ button {
   cursor: pointer;
   transition: all 0.3s ease-in-out; }
   button:hover {
-    background: #F2DAD7;
     transition: all 0.3s ease-in-out;
     transform: scale(1.03); }
 
 .btn-main {
   padding: 20px;
   margin: 2em 2px;
-  background: #ffffff; }
+  background: #F2DAD7; }
+  .btn-main:hover {
+    background: #CECDCA; }
 
 .btn-sm {
   padding: 10px;
@@ -120,7 +137,8 @@ button {
   font-weight: 100; }
 
 .subtitle {
-  font-size: .9em; }
+  font-size: .9em;
+  color: #474545; }
 
 .enter {
   margin: 1em 0;
@@ -132,7 +150,7 @@ button {
 
 section {
   z-index: 1;
-  min-height: 500px; }
+  min-height: 400px; }
 
 section div {
   scroll-behavior: smooth;
@@ -171,24 +189,30 @@ nav {
 .hero__title {
   width: 65%; }
   .hero__title h1 {
-    font-size: 3.3em; }
+    font-size: 3.3em;
+    line-height: 1.1em;
+    color: #D1A39E; }
   .hero__title p {
-    color: #D1A39E;
+    color: #474545;
     margin-left: 2px;
     margin-bottom: 15px; }
 
 .scroll {
   position: absolute;
-  font-size: .6em;
   text-transform: uppercase;
   letter-spacing: 2px;
   bottom: 20px; }
+  .scroll span {
+    font-size: .6em; }
   .scroll i {
     margin-left: 5px;
-    color: #474545;
+    margin-top: 8px;
+    color: #D1A39E;
     opacity: .5;
     animation: bounce 2s ease-in infinite;
     cursor: pointer; }
+    .scroll i:hover {
+      color: #474545; }
 
 #skills {
   position: relative;
@@ -230,22 +254,16 @@ nav {
     font-size: 2.5em;
     margin: 0;
     color: #c9938d; }
-  .work__container p {
-    font-size: 0.8em;
-    letter-spacing: 2px;
-    margin-left: 5px;
-    text-transform: uppercase;
-    color: #b8726a; }
   .work__container .btn-sm {
     margin-top: 50px; }
 
 .work__projectbox {
-  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 15px; }
 
 .work__project {
   margin-right: 15px;
@@ -290,7 +308,7 @@ nav {
 
 .travelmuse {
   transition: all 0.5s ease-out;
-  transform: translateY(120px); }
+  transform: translateY(150px); }
   .travelmuse:before {
     content: 'the travel muse';
     position: absolute;
@@ -312,7 +330,7 @@ nav {
 
 .dailyui {
   transition: all 0.5s ease-out;
-  transform: translateY(90px); }
+  transform: translateY(150px); }
   .dailyui:before {
     content: 'daily ui challenges';
     position: absolute;
@@ -334,7 +352,7 @@ nav {
 
 #contact {
   width: 100%;
-  height: 45vh;
+  height: 40vh;
   background: #D1A39E;
   position: relative; }
 
@@ -346,8 +364,6 @@ nav {
   .contact__header h1 {
     color: #ffffff;
     font-size: 2em; }
-  .contact__header p {
-    color: #F2DAD7; }
 
 .contact__main {
   position: absolute;

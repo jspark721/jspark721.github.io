@@ -46,6 +46,7 @@ p {
   margin: 0;
   line-height: 1.3em;
   font-size: 1em;
+  color: $dark;
 }
 
 h1 {
@@ -59,6 +60,23 @@ h2 {
   font-weight: 100;
   font-size: 1.5em;
   margin: 0;
+}
+
+.sm-caps {
+  color: $primary;
+  font-family: $body;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+  margin-bottom: 15px;
+  margin-left: 2px;
+}
+
+.p-caps {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  margin-left: 5px;
+  text-transform: uppercase;
 }
 
 //icons
@@ -81,7 +99,6 @@ button {
   cursor: pointer;
   transition: $ease;
   &:hover {
-    background: $primary;
     transition: $ease;
     transform: scale(1.03);
   }
@@ -90,7 +107,10 @@ button {
 .btn-main {
   padding: 20px;
   margin: 2em 2px;
-  background: $white;
+  background: $primary;
+  &:hover {
+    background: $light;
+  }
 }
 .btn-sm {
   padding: 10px;
@@ -157,6 +177,7 @@ button {
 
 .subtitle {
   font-size: .9em;
+  color: $dark;
 }
 
 .enter {
@@ -171,7 +192,7 @@ button {
 
 section {
   z-index: 1;
-  min-height: 500px;
+  min-height: 400px;
 }
 
 section div {
@@ -219,9 +240,11 @@ nav {
   width: 65%;
   h1 {
     font-size: 3.3em;
+    line-height: 1.1em;
+    color: $secondary;
   }
   p {
-    color: $secondary;
+    color: $dark;
     margin-left: 2px;
     margin-bottom: 15px;
   }
@@ -230,16 +253,22 @@ nav {
 
 .scroll {
   position: absolute;
-  font-size: .6em;
   text-transform: uppercase;
   letter-spacing: 2px;
   bottom: 20px;
+  span {
+    font-size: .6em;
+  }
   i {
     margin-left: 5px;
-    color: $dark;
+    margin-top: 8px;
+    color: $secondary;
     opacity: .5;
     animation: bounce 2s ease-in infinite;
     cursor: pointer;
+    &:hover {
+      color: $dark;
+    }
   }
 }
 //skills section
@@ -289,24 +318,17 @@ nav {
     margin: 0;
     color: darken($secondary, 5%);
   }
-  p {
-    font-size: 0.8em;
-    letter-spacing: 2px;
-    margin-left: 5px;
-    text-transform: uppercase;
-    color: darken($secondary, 15%);
-  }
   .btn-sm {
     margin-top: 50px;
   }
 }
 .work__projectbox {
-  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin-bottom: 15px;
 }
 .work__project {
   margin-right: 15px;
@@ -356,7 +378,7 @@ nav {
 }
 .travelmuse {
   transition: $ease-slow;
-  transform: translateY(120px);
+  transform: translateY(150px);
   &:before {
     content: 'the travel muse';
     position: absolute;
@@ -382,7 +404,7 @@ nav {
 }
 .dailyui {
   transition: $ease-slow;
-  transform: translateY(90px);
+  transform: translateY(150px);
   &:before {
     content: 'daily ui challenges';
     position: absolute;
@@ -409,7 +431,7 @@ nav {
 //contact section
 #contact {
   width: 100%;
-  height: 45vh;
+  height: 40vh;
   background: $secondary;
   position: relative;
 }
@@ -421,9 +443,6 @@ nav {
   h1 {
     color: $white;
     font-size: 2em;
-  }
-  p {
-    color: $primary;
   }
 }
 .contact__main {
