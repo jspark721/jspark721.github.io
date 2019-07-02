@@ -79,7 +79,7 @@ button {
   margin: 2em 2px;
   background: #F2DAD7; }
   .btn-main:hover {
-    background: #CECDCA; }
+    background: #E8DCD3; }
 
 .btn-sm {
   padding: 10px;
@@ -87,7 +87,7 @@ button {
   color: #b8726a;
   border-color: #b8726a; }
   .btn-sm:hover {
-    background: #ffffff; }
+    background: #E8DCD3; }
 
 .landing {
   position: fixed;
@@ -161,7 +161,6 @@ nav {
   top: 20px;
   right: 20px;
   z-index: 3;
-  opacity: 0;
   text-transform: uppercase; }
   nav a {
     letter-spacing: 3px;
@@ -173,6 +172,12 @@ nav {
       background: #F2DAD7;
       border: 1px solid #474545;
       box-shadow: 1px 1px 2px rgba(71, 69, 69, 0.3); }
+
+.navbar {
+  opacity: 0; }
+
+.about-nav {
+  margin-top: 8px; }
 
 #main {
   width: 100%;
@@ -372,14 +377,13 @@ nav {
   width: 50%;
   height: 65%;
   text-align: center;
-  background: #F2DAD7;
+  background: #E8DCD3;
+  transition: all 0.3s ease-in-out;
   box-shadow: 3px 3px 6px rgba(71, 69, 69, 0.2); }
   .contact__main p {
     margin-top: 5em;
-    line-height: 1.7em;
-    color: #D1A39E; }
+    line-height: 1.7em; }
   .contact__main a {
-    color: #D1A39E;
     text-decoration: underline; }
     .contact__main a:hover {
       transition: all .3s ease-out;
@@ -405,7 +409,7 @@ nav {
     padding: 15px; }
     .social a:hover {
       transition: all .3s ease-out;
-      color: #615e5e; }
+      color: #474545; }
 
 .footer__spacer {
   position: relative;
@@ -435,8 +439,8 @@ footer {
     font-size: .8em; }
 
 .footer__content {
-  position: fixed;
-  margin-top: 11em;
+  position: absolute;
+  margin-top: 14em;
   margin-left: 8em;
   width: 65%; }
   .footer__content h3 {

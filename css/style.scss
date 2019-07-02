@@ -6,7 +6,7 @@ $big: 'Merriweather', serif;
 $white: #ffffff;
 $primary: #F2DAD7;
 $secondary: #D1A39E;
-$light: #CECDCA;
+$light: #E8DCD3;
 $dark: #474545;
 
 $ease: all 0.3s ease-in-out;
@@ -118,7 +118,7 @@ button {
   color: darken($secondary, 15%);
   border-color: darken($secondary, 15%);
   &:hover {
-    background: $white;
+    background: $light;
   }
 }
 //intro landing page
@@ -206,7 +206,6 @@ nav {
   top: 20px;
   right: 20px;
   z-index: 3;
-  opacity: 0;
   text-transform: uppercase;
   a {
     letter-spacing: 3px;
@@ -220,6 +219,12 @@ nav {
       box-shadow: 1px 1px 2px rgba($dark, .3);
     }
   }
+}
+.navbar {
+  opacity: 0;
+}
+.about-nav {
+  margin-top: 8px;
 }
 
 // homepage - main area
@@ -452,15 +457,14 @@ nav {
   width: 50%;
   height: 65%;
   text-align: center;
-  background: $primary;
+  background: $light;
+  transition: $ease;
   box-shadow: 3px 3px 6px rgba($dark, .2);
   p {
     margin-top: 5em;
     line-height: 1.7em;
-    color: $secondary;
   }
   a {
-    color: $secondary;
     text-decoration: underline;
     &:hover {
       transition: all .3s ease-out;
@@ -492,7 +496,7 @@ nav {
     padding: 15px;
     &:hover {
       transition: all .3s ease-out;
-      color: lighten($dark, 10%);
+      color: $dark;
     }
   }
 }
@@ -529,8 +533,8 @@ footer {
 }
 
 .footer__content {
-  position: fixed;
-  margin-top: 11em;
+  position: absolute;
+  margin-top: 14em;
   margin-left: 8em;
   width: 65%;
   h3 {

@@ -148,7 +148,7 @@ function close() {
   });
   anime({
   	targets: 'nav',
-    translateY: '10px',
+    translateY: '8px',
     opacity: 1,
     delay: 1500,
     duration: 1200,
