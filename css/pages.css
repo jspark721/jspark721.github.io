@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
+.active {
+  border: 1px solid #474545;
+  box-shadow: 1px 1px 2px rgba(71, 69, 69, 0.3);
+  background: #E8DCD3; }
+
+.about__short {
+  min-height: 200px;
+  height: 200px; }
+
+.about__page-header {
+  width: 100%;
+  min-height: 250px;
+  height: 20vh;
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; }
+
+.about__page-header-container {
+  width: 65%;
+  padding-right: 70px; }
+  .about__page-header-container h1 {
+    margin-bottom: 50px;
+    font-size: 3.7em; }
+
+.about__page {
+  background: #E8DCD3;
+  width: 100%;
+  height: 50vh;
+  position: relative; }
+
+.about__page-julie {
+  position: absolute;
+  left: 15%;
+  top: -8%;
+  width: 50%;
+  height: 120%;
+  border: 8px solid #E8DCD3;
+  background-image: url("../img/julie.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.about__page-description {
+  width: 40%;
+  min-width: 350px;
+  max-width: 450px;
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  padding: 15px 40px;
+  background: #d8b0ac;
+  box-shadow: 2px 2px 5px rgba(71, 69, 69, 0.3); }
+  .about__page-description p {
+    font-family: "Merriweather", serif;
+    line-height: 1.8em;
+    margin: 20px 0; }
+
+.about__page2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 73%;
+  margin-left: 17%;
+  margin-top: 12%; }
+  .about__page2 h3 {
+    line-height: 1.6em;
+    color: #c9938d; }
+
+.about__page3 {
+  background: #F2DAD7;
+  height: 100%;
+  width: 100%;
+  min-height: 400px; }
+  .about__page3 p {
+    margin-left: 17%;
+    margin-top: 3%;
+    width: 73%;
+    line-height: 1.6em;
+    color: #474545; }

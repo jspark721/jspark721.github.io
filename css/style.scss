@@ -1,16 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Merriweather');
-
-$body: 'Inconsolata', monospace;
-$big: 'Merriweather', serif;
-
-$white: #ffffff;
-$primary: #F2DAD7;
-$secondary: #D1A39E;
-$light: #E8DCD3;
-$dark: #474545;
-
-$ease: all 0.3s ease-in-out;
-$ease-slow: all 0.5s ease-out;
+@import 'variables.scss';
+@import 'pages.scss';
 
 * {
   box-sizing: border-box;
@@ -53,13 +42,24 @@ h1 {
   font-family: $big;
   margin-bottom: 0.3em;
   font-weight: 100;
-  color: $dark;
+  font-size: 3.3em;
+  line-height: 1.1em;
+  color: $secondary;
 }
 
 h2 {
   font-weight: 100;
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 0;
+  color: $dark;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: $dark;
+  line-height: 1.2em;
+  font-family: $big;
+  font-weight: 100;
 }
 
 .sm-caps {
@@ -148,6 +148,12 @@ button {
   width: 80px;
   height: 80px;
 }
+.landing__box-light {
+  background: $white;
+}
+#logo-jp {
+  color: $secondary;
+}
 
 .landing__logo {
   position: absolute;
@@ -193,6 +199,7 @@ button {
 section {
   z-index: 1;
   min-height: 400px;
+  position: relative;
 }
 
 section div {
@@ -243,11 +250,6 @@ nav {
 
 .hero__title {
   width: 65%;
-  h1 {
-    font-size: 3.3em;
-    line-height: 1.1em;
-    color: $secondary;
-  }
   p {
     color: $dark;
     margin-left: 2px;
