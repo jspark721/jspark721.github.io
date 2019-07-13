@@ -15,7 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $dark;
+  color: $secondary;
   cursor: pointer;
 }
 
@@ -219,6 +219,7 @@ nav {
     padding: 5px 15px;
     font-size: .8em;
     transition: $ease;
+    color: $dark;
     border: 1px solid transparent;
     &:hover {
       background: $primary;
