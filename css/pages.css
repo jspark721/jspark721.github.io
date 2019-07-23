@@ -70,6 +70,7 @@
   margin-top: 7%;
   position: relative;
   width: 72%;
+  height: 100%;
   max-width: 1400px;
   text-align: center; }
   .about__page-body-container h2 {
@@ -81,7 +82,6 @@
 
 .list-carousel {
   margin-top: 5%;
-  border: 1px solid #D1A39E;
   display: flex;
   flex-wrap: nowrap; }
   .list-carousel h2 {
@@ -92,7 +92,34 @@
 
 .carousel-left, .carousel-right {
   width: 10%;
-  margin-top: 5%; }
+  margin-top: 7px; }
+  .carousel-left i, .carousel-right i {
+    font-size: 2.5em;
+    color: rgba(209, 163, 158, 0.7);
+    cursor: pointer; }
+    .carousel-left i:hover, .carousel-right i:hover {
+      color: rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease-in-out; }
 
 .carousel-middle {
-  width: 80%; }
+  width: 100%;
+  height: 100px; }
+
+.slideshow {
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+.slide {
+  position: absolute;
+  background: #ffffff;
+  margin: 0;
+  width: 83%;
+  text-align: center;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s; }
+
+.show {
+  opacity: 1;
+  z-index: 2; }

@@ -81,6 +81,7 @@
   margin-top: 7%;
   position: relative;
   width: 72%;
+  height: 100%;
   max-width: 1400px;
   text-align: center;
   h2 {
@@ -93,7 +94,6 @@
 }
 .list-carousel {
   margin-top: 5%;
-  border: 1px solid $secondary;
   display: flex;
   flex-wrap: nowrap;
   h2 {
@@ -105,8 +105,40 @@
 }
 .carousel-left, .carousel-right {
   width: 10%;
-  margin-top: 5%;
+  margin-top: 7px;
+  i {
+    font-size: 2.5em;
+    color: rgba($secondary, .7);
+    cursor: pointer;
+    &:hover {
+      color: rgba($white, .5);
+      transition: $ease;
+    }
+  }
 }
 .carousel-middle {
-  width: 80%;
+  width: 100%;
+  height: 100px;
+}
+
+.slideshow {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  background: $white;
+  margin: 0;
+  width: 83%;
+  text-align: center;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+}
+
+.show {
+  opacity: 1;
+  z-index: 2;
 }
