@@ -64,14 +64,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: flex-start; }
 
 .about__page-body-container {
+  margin-top: 7%;
   position: relative;
   width: 72%;
   max-width: 1400px;
-  text-align: justify; }
-  .about__page-body-container h3 {
-    font-size: 1.3em;
-    line-height: 1.7em;
-    font-family: "Lora", serif; }
+  text-align: center; }
+  .about__page-body-container h2 {
+    color: #ffffff;
+    font-family: "Lora", serif;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    margin-top: -10px; }
+
+.list-carousel {
+  margin-top: 5%;
+  border: 1px solid #D1A39E;
+  display: flex;
+  flex-wrap: nowrap; }
+  .list-carousel h2 {
+    text-transform: uppercase;
+    font-family: "Lora", serif;
+    letter-spacing: 5px;
+    color: #D1A39E; }
+
+.carousel-left, .carousel-right {
+  width: 10%;
+  margin-top: 5%; }
+
+.carousel-middle {
+  width: 80%; }

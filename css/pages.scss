@@ -74,17 +74,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .about__page-body-container {
+  margin-top: 7%;
   position: relative;
   width: 72%;
   max-width: 1400px;
-  text-align: justify;
-  h3 {
-    font-size: 1.3em;
-    line-height: 1.7em;
+  text-align: center;
+  h2 {
+    color: $white;
     font-family: $serif;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    margin-top: -10px;
   }
+}
+.list-carousel {
+  margin-top: 5%;
+  border: 1px solid $secondary;
+  display: flex;
+  flex-wrap: nowrap;
+  h2 {
+    text-transform: uppercase;
+    font-family: $serif;
+    letter-spacing: 5px;
+    color: $secondary;
+  }
+}
+.carousel-left, .carousel-right {
+  width: 10%;
+  margin-top: 5%;
+}
+.carousel-middle {
+  width: 80%;
 }
