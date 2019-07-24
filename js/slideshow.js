@@ -1,5 +1,6 @@
 let slides = document.querySelectorAll('.slideshow .slide');
 let currentSlide = 0;
+let slideInterval = setInterval(nextSlide, 5000);
 let next = document.getElementById('next');
 let previous = document.getElementById('previous');
 
@@ -19,7 +20,6 @@ function previousSlide() {
 
 next.onclick = function() {
   nextSlide();
-  console.log('next button clicked');
 }
 
 previous.onclick = function() {
