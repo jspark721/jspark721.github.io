@@ -9,8 +9,9 @@
 
 .about__page-header {
   width: 100%;
-  min-height: 250px;
-  height: 80vh;
+  min-height: 350px;
+  background: $white;
+  height: 95vh;
   margin-top: 80px;
   position: relative;
   display: flex;
@@ -31,26 +32,30 @@
   width: 45%;
   top: 10%;
   height: 70%;
-  background: $light;
+  background-image: url('../img/julie.jpg');
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .about__page-header-title{
   position: absolute;
   top: 18%;
   left: 38%;
+  background: $white;
   span {
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: $secondary;
+    color: $dark;
     font-weight: 900;
     font-size: .7em;
     margin-left: 15px;
   }
   h1 {
-    font-size: 3.7em;
+    font-size: 3em;
     padding: 8px;
     letter-spacing: -1px;
-    margin: 0;
+    margin: 3px;
   }
 }
 .about__page-header-text{
@@ -70,6 +75,7 @@
   background: $light;
   width: 100%;
   height: 40vh;
+  min-height: 350px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -108,10 +114,10 @@
   margin-top: 18px;
   i {
     font-size: 2.5em;
-    color: rgba($secondary, .7);
+    color: rgba($white, .5);
     cursor: pointer;
     &:hover {
-      color: rgba($white, .5);
+      color: rgba($secondary, .7);
       transition: $ease;
     }
   }
