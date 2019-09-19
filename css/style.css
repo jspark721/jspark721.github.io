@@ -417,17 +417,15 @@ nav {
 
 .work__projectbox {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin-bottom: 15px; }
 
 .work__project {
   margin-right: 15px;
   height: 200px;
   border: 1px solid #b8726a;
-  width: 33%;
+  width: 95%;
   opacity: .8;
   display: flex;
   justify-content: center;
@@ -640,6 +638,44 @@ footer {
     width: 100%; }
   .hero__title {
     margin: 10em 2em; } }
+
+@media screen and (max-width: 725px) {
+  #work {
+    height: 120vh; }
+  .work__container h1 {
+    margin-top: 2em; }
+  .work__container .p-caps {
+    margin-bottom: 30px; }
+  .work__projectbox {
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px; }
+  .amphoto {
+    transition: all 0.5s ease-out;
+    transform: translateY(10px); }
+    .amphoto:after {
+      background-image: url("../img/amproject.png");
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .amphoto:hover {
+      transform: translateY(5px); }
+  .travelmuse {
+    transition: all 0.5s ease-out;
+    transform: translateY(10px); }
+    .travelmuse:after {
+      background-image: url("../img/tmproject.png");
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .travelmuse:hover {
+      transform: translateY(5px); }
+  .dailyui {
+    transition: all 0.5s ease-out;
+    transform: translateY(10px); }
+    .dailyui:after {
+      background-image: url("../img/uiproject.png");
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .dailyui:hover {
+      transform: translateY(5px); } }
 
 @media screen and (max-width: 35em) {
   .social li {

@@ -338,17 +338,15 @@ nav {
 }
 .work__projectbox {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin-bottom: 15px;
 }
 .work__project {
   margin-right: 15px;
   height: 200px;
   border: 1px solid darken($secondary, 15%);
-  width: 33%;
+  width: 95%;
   opacity: .8;
   display: flex;
   justify-content: center;
@@ -607,6 +605,62 @@ footer {
   }
   .hero__title {
     margin: 10em 2em;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  #work {
+    height: 120vh;
+  }
+  .work__container {
+    h1 {
+      margin-top: 2em;
+    }
+    .p-caps {
+      margin-bottom: 30px;
+    }
+  }
+  .work__projectbox {
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  }
+  .work__project {
+  }
+  .amphoto {
+    transition: $ease-slow;
+    transform: translateY(10px);
+    &:after {
+      background-image:url('../img/amproject.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:hover {
+      transform: translateY(5px);
+    }
+  }
+  .travelmuse {
+    transition: $ease-slow;
+    transform: translateY(10px);
+    &:after {
+      background-image:url('../img/tmproject.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:hover {
+      transform: translateY(5px);
+    }
+  }
+  .dailyui {
+    transition: $ease-slow;
+    transform: translateY(10px);
+    &:after {
+      background-image:url('../img/uiproject.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:hover {
+      transform: translateY(5px);
+    }
   }
 }
 
