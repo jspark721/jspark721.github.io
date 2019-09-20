@@ -170,7 +170,7 @@
   background: #ffffff;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 2px; }
 
 .project {
@@ -816,6 +816,7 @@ footer {
     margin: 10em 2em; }
   #portfolio {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     height: 1250px; } }
 
 @media screen and (max-width: 800px) {
