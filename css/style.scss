@@ -11,6 +11,7 @@ html {
 }
 body {
   font-family: $body;
+  background: $white;
 }
 
 //fonts
@@ -616,6 +617,10 @@ footer {
   .hero__title {
     margin: 10em 2em;
   }
+  #portfolio {
+    grid-template-columns: 1fr 1fr;
+    height: 1250px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -759,5 +764,16 @@ footer {
   .about__page-body-container {
     margin: 20% 0;
     width: 100%;
+  }
+  #portfolio {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: 2000px;
+    .project__image {
+      width: 100%;
+    }
+    .zoom {
+      margin-top: 0;
+    }
   }
 }
