@@ -608,6 +608,19 @@ footer {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .about__page-header-container {
+    width: 90%;
+  }
+  .about__page-header-title {
+    top: 15%;
+    left: 5%;
+  }
+  .about__page-header-img {
+    width: 65%;
+    top: 20%;
+  }
+}
 @media screen and (max-width: 725px) {
   #work {
     height: 120vh;
