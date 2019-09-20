@@ -230,7 +230,7 @@ button {
   color: #b8726a;
   border-color: #b8726a; }
   .btn-sm:hover {
-    background: #E8DCD3; }
+    background: #ffffff; }
 
 .landing {
   position: fixed;
@@ -417,7 +417,8 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  overflow: hidden; }
 
 .work__project {
   margin-right: 15px;
@@ -580,8 +581,6 @@ footer {
   border-top: 0;
   transition: border .3s ease,padding .3s ease; }
   footer:hover {
-    padding: 0;
-    padding-top: 0;
     border: 1em solid #D1A39E;
     border-top: 0; }
   footer p {
@@ -613,7 +612,7 @@ footer {
   50% {
     transform: translateY(-5px); } }
 
-@media screen and (min-width: 33em) {
+@media screen and (min-width: 1100px) {
   .landing {
     display: grid;
     align-items: start;
@@ -629,7 +628,9 @@ footer {
   .landing__content {
     grid-area: 1 / 4 / 1 / 4;
     text-align: right;
-    opacity: 1; } }
+    opacity: 1; }
+  .hero__title, .skills__container, .work__container {
+    width: 50%; } }
 
 @media screen and (max-width: 870px) {
   .hero__image {
@@ -649,7 +650,7 @@ footer {
 
 @media screen and (max-width: 725px) {
   #work {
-    height: 120vh; }
+    min-height: 900px; }
   .work__container h1 {
     margin-top: 2em; }
   .work__container .p-caps {
@@ -657,6 +658,8 @@ footer {
   .work__projectbox {
     grid-template-columns: 1fr;
     grid-row-gap: 10px; }
+  .work__project {
+    height: 170px; }
   .amphoto {
     transition: all 0.5s ease-out;
     transform: translateY(10px); }
@@ -685,11 +688,32 @@ footer {
     .dailyui:hover {
       transform: translateY(5px); } }
 
-@media screen and (max-width: 35em) {
-  .social li {
-    display: block;
-    padding: 5px; }
+@media screen and (max-width: 600px) {
+  .hero__title, .skills__container, .work__container {
+    width: 80%; }
+    .hero__title h1, .skills__container h1, .work__container h1 {
+      font-size: 2.5em;
+      margin: 0; }
+  .social {
+    padding: 0 0 0 8px; }
+    .social li {
+      display: block;
+      padding: 7px; }
   .contact__social {
-    top: 37%; }
+    top: 28%; }
+  .contact__header {
+    width: 90%;
+    left: 5%; }
   .contact__main {
-    height: 70%; } }
+    height: 80%;
+    width: 70%;
+    left: 15%; }
+    .contact__main .p-caps {
+      margin-top: 2.5em; }
+  .footer__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 0; } }
