@@ -1,5 +1,9 @@
 @import 'variables.scss';
 
+.noscroll {
+  overflow: hidden;
+}
+
 .active {
   border: 1px solid $dark;
   box-shadow: 1px 1px 2px rgba($dark, .3);
@@ -274,7 +278,7 @@
 
 //project popup overlay
 
-.overlay {
+#overlay {
   position: fixed;
   background: rgba($dark, 0.7);
   top: 0;
@@ -284,7 +288,7 @@
   display: none;
   z-index: 3;
 }
-.overlay.open {
+#overlay.open {
   display: grid;
   align-items: center;
   justify-items: center;
@@ -305,6 +309,7 @@
 .img-container {
   max-height: 570px;
   width: 100%;
+  border: 1px solid $light;
   overflow-y: scroll;
   img {
     width: 100%;

@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll('.project');
-const overlay = document.querySelector('.overlay');
+const overlay = document.getElementById('overlay');
 const overlayImage = document.querySelector('.overlay__inner img');
 let overlayText = document.querySelector('.overlay__inner_title')
 let overlayDesc = document.querySelector('.overlay__desc');
@@ -14,10 +14,16 @@ function open(e) {
 
   const txt = e.currentTarget.querySelector('.desc').name;
   overlayDesc.innerHTML = txt;
+
+  if(overlay.classList.contains('open')){
+    document.body.classList.add("noscroll");
+    document.querySelector('.about-nav').style.zIndex = "-1";
+  }
 }
 
 function close() {
   overlay.classList.remove('open');
+  document.body.classList.remove("noscroll");
 }
 
 buttons.forEach(button => button.addEventListener('click', open));

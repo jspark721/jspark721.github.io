@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather|Lora");
 @import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather|Lora");
+.noscroll {
+  overflow: hidden; }
+
 .active {
   border: 1px solid #474545;
   box-shadow: 1px 1px 2px rgba(71, 69, 69, 0.3);
@@ -234,7 +237,7 @@
       color: #D1A39E;
       transform: scale(1.05); }
 
-.overlay {
+#overlay {
   position: fixed;
   background: rgba(71, 69, 69, 0.7);
   top: 0;
@@ -244,7 +247,7 @@
   display: none;
   z-index: 3; }
 
-.overlay.open {
+#overlay.open {
   display: grid;
   align-items: center;
   justify-items: center;
@@ -264,6 +267,7 @@
 .img-container {
   max-height: 570px;
   width: 100%;
+  border: 1px solid #E8DCD3;
   overflow-y: scroll; }
   .img-container img {
     width: 100%; }
@@ -930,3 +934,10 @@ footer {
       width: 100%; }
     #portfolio .zoom {
       margin-top: 0; } }
+
+@media screen and (max-width: 475px) {
+  #overlay.open {
+    width: 100%;
+    height: 100%; }
+  .overlay__inner {
+    width: 100%; } }
