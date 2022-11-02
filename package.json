@@ -19,7 +19,7 @@
   "homepage": "https://github.com/jspark721/juliepark#readme",
   "devDependencies": {
     "browser-sync": "^2.24.5",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-sass": "^4.0.1"
   }
 }
